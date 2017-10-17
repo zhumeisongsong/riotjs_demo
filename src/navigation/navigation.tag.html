@@ -5,14 +5,14 @@
       <div id="navMenuTransparentExample" class="navbar-menu">
         <div class="navbar-start">
 
-          <a class="navbar-item { is-active: ctrl.current_route === 'index' }" href="#/">
-            index
+          <a class="navbar-item { is-active: ctrl.current_route === 'index' }" href="/">
+            首页
           </a>
-          <a class="navbar-item { is-active: ctrl.current_route === 'another' }" href="#/another">
-            another
+          <a class="navbar-item { is-active: ctrl.current_route === 'another' }" href="/another">
+            关于我们
           </a>
-          <a class="navbar-item { is-active: ctrl.current_route === 'page' }" href="#/page">
-            page
+          <a class="navbar-item { is-active: ctrl.current_route === 'page' }" href="/page">
+            联系我们
           </a>
         </div>
       </div>
@@ -24,4 +24,5 @@
     import Navigation from './navigation.tag.js';
     this.ctrl = new Navigation(this, this.opts);
   </script>
+  
 </navigation>

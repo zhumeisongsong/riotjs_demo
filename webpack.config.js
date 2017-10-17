@@ -92,11 +92,11 @@ module.exports = {
         test: /\.tag\.html$/,
         exclude: /node_modules/,
         loader: 'riot-tag-loader',
-        // options: {
-        //   type: 'es6', // transpile the riot tags using babel
-        //   hot: true,
-        //   debug: false
-        // }
+        options: {
+          type: 'es6', // transpile the riot tags using babel
+          hot: true,
+          debug: true
+        }
       },
       {
         test: /\.tag\.js$/,

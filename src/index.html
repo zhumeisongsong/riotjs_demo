@@ -12,7 +12,8 @@
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="renderer" content="webkit">
 
-  <link rel="manifest" href="./manifest.json"><!---Web App Manfiest-->
+  <link rel="manifest" href="./manifest.json">
+  <!---Web App Manfiest-->
 </head>
 
 <body>
@@ -22,47 +23,45 @@
     </div>
   </noscript>
 
-<div id="nav-root"></div>
+  <div id="nav-root"></div>
 
-<section class="section">
   <div class="container">
     <div id="app-root"></div>
   </div>
-</section>
 
-<style>
-  .github-corner:hover .octo-arm {
-    animation: octocat-wave 560ms ease-in-out
-  }
-
-  @keyframes octocat-wave {
-    0%,
-    100% {
-      transform: rotate(0)
-    }
-    20%,
-    60% {
-      transform: rotate(-25deg)
-    }
-    40%,
-    80% {
-      transform: rotate(10deg)
-    }
-  }
-
-  @media (max-width: 500px) {
+  <style>
     .github-corner:hover .octo-arm {
-      animation: none
-    }
-
-    .github-corner .octo-arm {
       animation: octocat-wave 560ms ease-in-out
     }
-  }
-</style>
 
-<!-- <script src="./bundle.js" charset="utf-8"></script> -->
-<script>
+    @keyframes octocat-wave {
+      0%,
+      100% {
+        transform: rotate(0)
+      }
+      20%,
+      60% {
+        transform: rotate(-25deg)
+      }
+      40%,
+      80% {
+        transform: rotate(10deg)
+      }
+    }
+
+    @media (max-width: 500px) {
+      .github-corner:hover .octo-arm {
+        animation: none
+      }
+
+      .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+      }
+    }
+  </style>
+
+  <!-- <script src="./bundle.js" charset="utf-8"></script> -->
+  <!-- <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./service-worker.js', {scope: './'}).then(function (registration) {
     }).catch(function (error) {
@@ -70,7 +69,7 @@
   } else {
     // The current browser doesn't support service workers.
   }
-</script>
+</script> -->
 
 </body>
 
