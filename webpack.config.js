@@ -25,10 +25,10 @@ module.exports = {
   },
   entry: {
     app: [
-      "./src/main.js"
+      "./app/main.js"
     ],
     styles: [
-      "./src/styles.scss"
+      "./app/styles.scss"
     ]
   },
   output: {
@@ -60,7 +60,7 @@ module.exports = {
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./app/index.html",
       filename: "./index.html",
       hash: true,
       inject: true,
@@ -78,11 +78,11 @@ module.exports = {
       include: ['navigationtag', 'apptag']
     }),
     // new ScriptExtHtmlWebpackPlugin({
-    //   defer: './src/styles.css'
+    //   defer: './app/styles.css'
     // }),
     new CopyWebpackPlugin([
-      { from: 'src/manifest.json' },
-      { from: 'src/assets', to:'assets' }
+      { from: 'app/manifest.json' },
+      { from: 'app/assets', to:'assets' }
     ]),
     new webpack.ProvidePlugin({ riot: 'riot' }),
   ],
