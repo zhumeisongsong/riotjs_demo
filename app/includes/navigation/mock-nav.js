@@ -28,5 +28,11 @@ export const navs = [
     "key": "search",
     "name": "search",
     "link": "search"
+  },
+  {
+    "id": 6,
+    "key": "timer",
+    "name": "timer",
+    "link": "timer"
   }
 ];

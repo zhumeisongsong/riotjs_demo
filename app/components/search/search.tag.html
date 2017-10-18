@@ -9,9 +9,18 @@
     <span class="usd">= 1 USD</span>
   </div>
 
+  <footer if={filtered.length> max}>
+    and { filtered.length - max} more currencies
+  </footer>
 
   <script>
     import Search from './search.tag'
+
+    this.max = 20
+    this.keyword = ''
+    this.rates = []
+    this.filtered = []
+
     const ctrl = new Search(this, this.opts)
   </script>
 

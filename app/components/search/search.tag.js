@@ -1,12 +1,8 @@
-import riot from 'riot';
-import route from 'riot-route';
+import riot from 'riot'
+import route from 'riot-route'
 
 export default class Search {
   constructor(scope, opts) {
-    scope.max = 15
-    scope.keyword = ''
-    scope.rates = []
-    scope.filtered = []
 
     this.opts = opts;
 
@@ -25,17 +21,16 @@ export default class Search {
         scope.update({rates: rates})
       })
 
+    scope.keyup = (e) => {
+      scope.keyword = e.target.value
+    }
+
     scope.on('update', () => {
       scope.filtered = scope.rates.filter((c => {
         return !scope.keyword || c.title.indexOf(scope.keyword.toUpperCase()) == 0
       }))
     })
 
-  }
-
-  keyup (e) {
-    alert('in')
-    self.keyword  = e.target.value
   }
 
 }

@@ -5,7 +5,6 @@ const $app = document.querySelector('#app_root')
 const $nav = document.querySelector('#nav_root')
 const $footer = document.querySelector('#footer_root')
 
-// route.base('#!')
 
 //nav tag
 require.ensure([], () => {
@@ -22,7 +21,7 @@ require.ensure([], () => {
 
 //index
 route('/', (name) => {
-  require.ensure([], function () {
+  require.ensure([], () => {
     const appTag = require('./components/top/app.tag.html')
     $app.innerHTML = '<app></app>'
     riot.mount('app', {})
@@ -31,7 +30,7 @@ route('/', (name) => {
 
 //sample tag
 route('/sample', () => {
-  require.ensure([], function () {
+  require.ensure([], () => {
     const sampleTag = require('./components/sample/sample.tag.html')
     $app.innerHTML = '<sample></sample>'
     riot.mount('sample', {})
@@ -41,7 +40,7 @@ route('/sample', () => {
 
 //another tag
 route('/another', () => {
-  require.ensure([], function () {
+  require.ensure([], () => {
     const anotherTag = require('./components/another/another.tag.html')
     $app.innerHTML = '<another></another>'
     riot.mount('another', {
@@ -50,14 +49,31 @@ route('/another', () => {
   }, 'anothertag')
 })
 
-//live filtering
+//filter search tag
 route('/search', () => {
-  require.ensure([], function () {
+  require.ensure([], () => {
     const searchTag = require('./components/search/search.tag.html')
     $app.innerHTML = '<search></search>'
     riot.mount('search', {})
   })
 }, 'searchTag')
 
+//timer tag
+route('/timer', () => {
+  require.ensure([], () => {
+    const timerTag = require('./components/timer/timer.tag.html')
+    $app.innerHTML = '<timer></timer>'
+    riot.mount('timer', {})
+  })
+}, 'timerTag')
+
+//redux tag
+route('/redux', () => {
+  require.ensure([], () => {
+    const reduxTag = require('./components/redux/redux.tag.html')
+    $app.innerHTML = '<redux></redux>'
+    riot.mount('redux', {})
+  })
+}, 'reduxTag')
 
 route.start(true)
