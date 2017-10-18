@@ -4,51 +4,52 @@
   </header>
 
   <div each={filtered.slice(0,max)} title={title} price={price}>
-    <span class="title">{ opts.title }</span>
-    <span class="price">{ opts.price }</span>
+    <span class="title">{title}</span>
+    <span class="price">{price}</span>
     <span class="usd">= 1 USD</span>
   </div>
 
-    <footer if={filtered.lengh > max}>
-      and { filtered.lengh - max} more currencies
-    </footer>
 
-    <script>
-      import Search from './search.tag'
-      const ctrl = new Search(this, this.opts)
-    </script>
+  <script>
+    import Search from './search.tag'
+    const ctrl = new Search(this, this.opts)
+  </script>
 
-    <style>
-      :scope {
-        display: block;
-        text-align: center;
-        color: #666;
-      }
-      header {
-        background: #72A7EE;
-        padding: 2em;
-        margin-bottom: 1em;
-      }
-      footer {
-        color: #ccc;
-        padding: 1em;
-      }
-      input[type=search] {
-        width: 100%;
-        font-size: 2em;
-        padding: .5em 0;
-        text-align: center;
-        outline: none;
-        border: 0;
-        border-radius: .2em;
-        background-color: rgba(255,255,255,.7);
-        transition: all .5s;
-      }
-      input[type=search]:hover,
-      input[type=search]:focus {
-        background-color: rgba(255,255,255,1);
-        box-shadow: 0 1px 5px rgba(0,0,0,.3);
-      }
-    </style>
+  <style>
+    :scope {
+      display: block;
+      text-align: center;
+      color: #666;
+    }
+
+    header {
+      background: #72A7EE;
+      padding: 2em;
+      margin-bottom: 1em;
+    }
+
+    footer {
+      color: #ccc;
+      padding: 1em;
+    }
+
+    input[type=search] {
+      width: 100%;
+      font-size: 2em;
+      padding: .5em 0;
+      text-align: center;
+      outline: none;
+      border: 0;
+      border-radius: .2em;
+      background-color: rgba(255, 255, 255, .7);
+      transition: all .5s;
+    }
+
+    input[type=search]:hover,
+    input[type=search]:focus {
+      background-color: rgba(255, 255, 255, 1);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+    }
+  </style>
 
 </search>
