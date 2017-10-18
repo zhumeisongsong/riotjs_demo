@@ -2,19 +2,19 @@ export const navs = [
   {
     "id": 1,
     "key": "index",
-    "name": "首页",
+    "name": "idnex",
     "link": "/"
   },
   {
     "id": 2,
     "key": "another",
-    "name": "另一个",
+    "name": "another",
     "link": "another"
   },
   {
     "id": 3,
     "key": "sample",
-    "name": "例子",
+    "name": "sample",
     "link": "sample"
   },
   {
@@ -22,5 +22,11 @@ export const navs = [
     "key": "redux",
     "name": "Redux",
     "link": "redux"
+  },
+  {
+    "id": 5,
+    "key": "search",
+    "name": "search",
+    "link": "search"
   }
 ];

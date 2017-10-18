@@ -50,4 +50,14 @@ route('/another', () => {
   }, 'anothertag')
 })
 
+//live filtering
+route('/search', () => {
+  require.ensure([], function () {
+    const searchTag = require('./components/search/search.tag.html')
+    $app.innerHTML = '<search></search>'
+    riot.mount('search', {})
+  })
+}, 'searchTag')
+
+
 route.start(true)
