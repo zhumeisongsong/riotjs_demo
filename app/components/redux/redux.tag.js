@@ -5,8 +5,8 @@ export default class Redux {
   constructor(scope, opts) {
 
     scope.on('mount', () => {
-      this.same = this.store.getState().sampleReducer.name
-      this.update()
+      scope.name = scope.store.getState().sampleReducer.name
+      scope.update()
     })
 
     scope.initialize = (e) => {
@@ -21,7 +21,7 @@ export default class Redux {
 
       scope.store.dispatch(action).then(() => {
         console.log('Promise executed')
-        scope.name = this.store.getState().sampleReducer.name
+        scope.name = scope.store.getState().sampleReducer.name
         scope.update()
       })
 

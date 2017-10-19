@@ -1,6 +1,6 @@
 import riot from 'riot'
 import {
-  combimeReducers,
+  combineReducers,
   applyMiddleware,
   createStore,
   compose
@@ -10,7 +10,7 @@ import promise from 'redux-promise-middleware'
 
 import sampleReducer from './modules/sample/reducer'
 
-const reducers = combimeReducers({
+const reducers = combineReducers({
   sampleReducer
 })
 
