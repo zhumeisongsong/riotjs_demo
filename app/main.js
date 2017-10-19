@@ -1,20 +1,23 @@
 import riot from 'riot'
 import route from 'riot-route'
 
+import StoreMixin from './store'
+
+riot.mixin(StoreMixin)
+
 const $app = document.querySelector('#app_root')
 const $nav = document.querySelector('#nav_root')
 const $footer = document.querySelector('#footer_root')
 
-
 //nav tag
 require.ensure([], () => {
-  const navigationTag = require('./includes/navigation/navigation.tag.html')
+  const navigationTag = require('./components/includes/navigation/navigation.tag.html')
   $nav.innerHTML = '<navigation></navigation>'
   riot.mount('navigation', {})
 }, 'navigationtag')
 //footer tag
 require.ensure([], () => {
-  const footerTag = require('./includes/footer/footer.tag.html')
+  const footerTag = require('./components/includes/footer/footer.tag.html')
   $footer.innerHTML = '<my-footer></my-footer>'
   riot.mount('my-footer')
 }, 'footerTag')

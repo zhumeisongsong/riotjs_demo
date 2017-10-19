@@ -1,3 +1,14 @@
-<my-redux>
-  sdsds 
-</my-redux>
+<redux>
+  <div>
+    <h3>Riot with Redux</h3>
+
+    <p>{this.name}</p>
+
+    <button onclick={initialize}>Initial fetch</button>
+  </div>
+
+  <script>
+    import Redux from './redux.tag'
+    const ctrl = new Redux(this, this.opts)
+  </script>
+</redux>
