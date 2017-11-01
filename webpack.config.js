@@ -22,6 +22,7 @@ module.exports = {
       "./node_modules"
     ]
   },
+
   entry: {
     app: [
       "./app/main.js"
@@ -37,7 +38,10 @@ module.exports = {
     chunkFilename: "[chunkhash].[name].chunk.js"
   },
   plugins: [
+    //sass
     extractSass,
+
+    //service worker
     new SWPrecacheWebpackPlugin(
       {
         cacheId: 'riotjs',
@@ -48,6 +52,8 @@ module.exports = {
         staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/]
       }
     ),
+
+    //uglify
     new UglifyJSPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
