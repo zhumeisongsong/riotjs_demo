@@ -4,10 +4,10 @@
   "description": "A webpack 3 riotjs boilerplate with performance in mind",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pmcalabrese/riotjs-webpack"
+    "url": "https://github.com/zhumeisongsong/riotjs_demo.git"
   },
   "main": "app/main.js",
-  "author": "Pachito Marco Calabrese <pm.calabrese@gmail.com>",
+  "author": "MonstarLab",
   "license": "MIT",
   "engines": {
     "node": ">=6.0.0"

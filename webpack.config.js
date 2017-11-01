@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const WebpackMd5Hash = require('webpack-md5-hash');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CommonsPlugin = new require("webpack/lib/optimize/CommonsChunkPlugin");
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
@@ -116,13 +115,13 @@ module.exports = {
           plugins: ["autobind-class-methods", "babel-plugin-transform-class-properties"]
         },
       },
-      // {
-      //   test: /\.css$/i,
-      //   use: ExtractTextPlugin.extract({
-      //     fallback: 'style-loader',
-      //     use: 'css-loader'
-      //   })
-      // },
+      {
+        test: /\.css$/i,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader'
+        })
+      },
       {
         test: /\.scss$/,
         use: extractSass.extract({

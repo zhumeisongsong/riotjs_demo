@@ -10,20 +10,22 @@ export default class Redux {
     })
 
     scope.initialize = (e) => {
+      // from view  tells store state has changed
       let action = {
         type: 'ACTION',
         payload: new Promise((t, c) => {
           setTimeout(() => {
+            //TODO: what is this?
             t()
           }, 1000)
-        })// use AJAX, Axios or other promise execute
+        })
       }
 
-      scope.store.dispatch(action).then(() => {
-        console.log('Promise executed')
-        scope.name = scope.store.getState().sampleReducer.name
-        scope.update()
-      })
+      scope.store.dispatch(action)//view send action
+        .then(() => {
+          scope.name = scope.store.getState().sampleReducer.name
+          scope.update()
+        })
 
     }
   }

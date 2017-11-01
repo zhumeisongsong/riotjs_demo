@@ -15,6 +15,4 @@ export default function (state={name:'Before Redux'},action) {
     default:
       return state
   }
-
-
 }

@@ -20,7 +20,7 @@ const middleware = applyMiddleware(
 )
 
 const store = createStore(
-  reducers,
+  reducers,//accept reducers as param
   compose(middleware)
 )
 
