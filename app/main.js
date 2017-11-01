@@ -83,7 +83,7 @@ route('/redux', () => {
 route('/todo',()=>{
   require.ensure([],()=>{
     const todoTag = require('./components/todo/todo.tag.html')
-    $app.innerHTML= `<todo></todo><todo></todo>`//A document can contain multiple instances of the same tag
+    $app.innerHTML= `<todo></todo>`//A document can contain multiple instances of the same tag
     riot.mount('todo',{
       title: 'I want to behave!',
       items: [
